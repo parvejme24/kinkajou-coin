@@ -1,6 +1,6 @@
 import About from "./components/About/About";
 import Banner from "./components/Banner/Banner";
-import BuyNow from "./components/BuyNow/BuyNow";
+// import BuyNow from "./components/BuyNow/BuyNow";
 import Contact from "./components/Contact/Contact";
 import FAQ from "./components/FAQ/FAQ";
 import Footer from "./components/Footer/Footer";
