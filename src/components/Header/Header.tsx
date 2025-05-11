@@ -1,12 +1,46 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import LOGO_ICON from "../../assets/logo-icon.png";
 import LOGO_TEXT from "../../assets/logo-text.png";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
 
-  const menuItems = ["Home", "About", "Tokenomics", "Roadmap", "Faq"];
+  const menuItems = [
+    { name: "Home", id: "home" },
+    { name: "About", id: "about" },
+    { name: "Tokenomics", id: "tokenomics" },
+    { name: "Roadmap", id: "roadmap" },
+    { name: "Faq", id: "faq" },
+  ];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = menuItems.map(item => document.getElementById(item.id));
+      const scrollPosition = window.scrollY + 100; // Offset for header height
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = sections[i];
+        if (section && section.offsetTop <= scrollPosition) {
+          setActiveSection(menuItems[i].id);
+          break;
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+      setActiveSection(sectionId);
+      setIsMenuOpen(false);
+    }
+  };
 
   const menuVariants = {
     closed: {
@@ -45,14 +79,17 @@ export default function Header() {
           <ul className="flex items-center gap-8 text-[#EEEEEE]">
             {menuItems.map((item, index) => (
               <motion.li
-                key={item}
+                key={item.id}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ scale: 1.1 }}
-                className="cursor-pointer hover:text-[#48FF76] transition-colors"
+                className={`cursor-pointer transition-colors ${
+                  activeSection === item.id ? "text-[#48FF76]" : "hover:text-[#48FF76]"
+                }`}
+                onClick={() => scrollToSection(item.id)}
               >
-                {item}
+                {item.name}
               </motion.li>
             ))}
           </ul>
@@ -60,7 +97,7 @@ export default function Header() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="ml-6 bg-gradient-to-r from-[#B9FEA4] to-[#48FF76] text-black px-6 py-2 rounded titillium font-semibold"
+            className="ml-10 bg-gradient-to-r from-[#B9FEA4] to-[#48FF76] text-black px-6 py-2 rounded titillium font-semibold"
           >
             Connect Wallet
           </motion.button>
@@ -104,15 +141,17 @@ export default function Header() {
               <ul className="flex flex-col items-center justify-center h-full gap-8 text-[#EEEEEE]">
                 {menuItems.map((item, index) => (
                   <motion.li
-                    key={item}
+                    key={item.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.3, delay: index * 0.1 }}
                     whileHover={{ scale: 1.1 }}
-                    className="text-2xl cursor-pointer hover:text-[#48FF76] transition-colors"
-                    onClick={() => setIsMenuOpen(false)}
+                    className={`text-2xl cursor-pointer transition-colors ${
+                      activeSection === item.id ? "text-[#48FF76]" : "hover:text-[#48FF76]"
+                    }`}
+                    onClick={() => scrollToSection(item.id)}
                   >
-                    {item}
+                    {item.name}
                   </motion.li>
                 ))}
                 <motion.button

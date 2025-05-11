@@ -56,10 +56,13 @@ export default function Banner() {
   };
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-b from-black to-[#0A0A0A] py-20 px-4 sm:px-6 lg:px-8">
+    <section
+      id="home"
+      className="relative bg-gradient-to-b from-black to-[#0A0A0A] py-20 px-4 sm:px-6 lg:px-8"
+    >
       <div className="container mx-auto max-w-7xl">
         <div className="relative bg-black/40 backdrop-blur-sm border border-[#113E14] shadow-lg rounded-3xl p-6 sm:p-8 lg:p-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Info Section */}
             <motion.div
               variants={containerVariants}
@@ -69,7 +72,7 @@ export default function Banner() {
             >
               <motion.h2
                 variants={itemVariants}
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-4xl font-bold text-[#ADF99F] leading-tight"
+                className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#ADF99F] leading-tight"
               >
                 KinkajouCoin: A Greener Future in Your Wallet
               </motion.h2>
@@ -89,7 +92,7 @@ export default function Banner() {
                 <h5 className="text-lg sm:text-xl text-[#C3C3C3] font-semibold">
                   Crypto Market Starts in
                 </h5>
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
+                <div className="flex items-center gap-4">
                   {Object.entries(timeLeft).map(([key, value]) => (
                     <motion.div
                       key={key}
@@ -98,7 +101,7 @@ export default function Banner() {
                     >
                       <div className="relative">
                         <div className="absolute inset-0 bg-gradient-to-b from-[#ADF99F]/20 to-transparent rounded-lg blur-sm" />
-                        <p className="relative border border-[#ADF99F] rounded-lg px-2 sm:px-4 py-4 sm:py-6 text-xl sm:text-2xl md:text-3xl font-bold text-white">
+                        <p className="relative border border-[#adf99f7c] rounded-lg text-xl sm:text-2xl md:text-3xl font-bold text-white px-5 py-5">
                           {value}
                         </p>
                       </div>
@@ -116,7 +119,7 @@ export default function Banner() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative order-first lg:order-last"
+              className="relative order-first md:order-last"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-[#ADF99F]/20 to-transparent rounded-full blur-3xl" />
               <motion.img

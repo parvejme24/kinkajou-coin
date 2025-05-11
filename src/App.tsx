@@ -14,7 +14,7 @@ export default function App() {
     <div className="bg-black">
       <Header />
       <Banner />
-      <BuyNow />
+      {/* <BuyNow /> */}
       <About />
       <Tokenomics />
       <Roadmap />
