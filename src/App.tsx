@@ -11,7 +11,7 @@ import Tokenomics from "./components/Tokenomics/Tokenomics";
 
 export default function App() {
   return (
-    <div>
+    <div className="bg-black">
       <Header />
       <Banner />
       <BuyNow />
