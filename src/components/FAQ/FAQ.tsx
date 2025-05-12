@@ -112,8 +112,8 @@ export default function FAQ() {
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4">
-                      <div className="w-10 h-10 bg-[#113E14] rounded-full flex items-center justify-center">
-                        <span className="text-[#B6B6B6] text-lg font-semibold">
+                      <div className="flex items-center justify-center">
+                        <span className="text-[#B6B6B6] text-lg font-semibold w-10 h-10 flex justify-center items-center bg-[#113E14] rounded-full ">
                           {item.id}
                         </span>
                       </div>

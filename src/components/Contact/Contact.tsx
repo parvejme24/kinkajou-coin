@@ -92,8 +92,8 @@ export default function Contact() {
               whileTap={{ scale: 0.95 }}
               className="group relative"
             >
-              <div className="w-12 h-12 text-2xl border bg-radial from-0% hover:bg-radial to-[#0F5214] hover:from-[#02FF08] hover:to-[#86FF89] hover:text-[#060609] rounded-full flex justify-center items-center">
-                <social.icon className=" text-[#00FF06]" />
+              <div className="group w-12 h-12 text-2xl border bg-radial from-0% hover:bg-radial to-[#0F5214] hover:from-[#02FF08] hover:to-[#86FF89] hover:text-[#060609] rounded-full flex justify-center items-center">
+                <social.icon className=" text-[#00FF06] group-hover:text-black" />
               </div>
             </motion.a>
           ))}
