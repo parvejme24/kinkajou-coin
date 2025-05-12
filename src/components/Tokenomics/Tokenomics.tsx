@@ -6,7 +6,7 @@ export default function Tokenomics() {
     <div id="tokenomics">
       <div className="container mx-auto max-w-7xl px-5 lg:px-0 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         {/* image  */}
-        <div>
+        <div className="flex justify-center lg:justify-start">
           <img src={Tokenomics_Image} alt="" draggable={false} />
         </div>
 

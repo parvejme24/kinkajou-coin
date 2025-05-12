@@ -32,7 +32,7 @@ export default function About() {
       variants={containerVariants}
       className="py-20 px-6"
     >
-      <div className="container md:mx-auto max-w-7xl px-5 lg:px-0 grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div className="container md:mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-10">
         {/* about text  */}
         <motion.div variants={itemVariants}>
           <motion.h2

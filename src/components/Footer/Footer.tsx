@@ -15,7 +15,7 @@ export default function Footer() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="h-[1px] w-full bg-gradient-to-r from-[#050D09] via-[#00FB06] to-[#050D09]"
         />
-        <ul className="flex justify-center lg:justify-start items-center gap-5 mt-4">
+        <ul className="flex justify-center items-center gap-5 mt-4">
           <motion.li whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <a
               href="javascript:void(0)"

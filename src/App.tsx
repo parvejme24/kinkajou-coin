@@ -8,10 +8,12 @@ import Header from "./components/Header/Header";
 import HowItWorks from "./components/HowItWorks/HowItWorks";
 import Roadmap from "./components/Roadmap/Roadmap";
 import Tokenomics from "./components/Tokenomics/Tokenomics";
+import Preloader from "./components/Preloader/Preloader";
 
 export default function App() {
   return (
     <div className="bg-black">
+      <Preloader />
       <Header />
       <Banner />
       <BuyNow />

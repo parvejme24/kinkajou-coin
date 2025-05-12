@@ -2,7 +2,7 @@ export default function BuyNow() {
   return (
     <div>
       <div className="container mx-auto max-w-7xl px-5 lg:px-0 grid grid-cols-1 md:grid-cols-2 gap-10">
-        <div className="border border-gray-400 rounded-2xl p-10 text-gray-400">
+        <div className="border border-green-900 rounded-2xl p-10 text-gray-400">
           comming soon
         </div>
         <div>

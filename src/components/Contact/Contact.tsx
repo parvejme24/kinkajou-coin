@@ -70,7 +70,7 @@ export default function Contact() {
           <p className="text-[#C3C3C3] text-lg max-w-2xl mx-auto mt-4">
             Email us at{" "}
             <span className="text-[#07DE4F]">support@kinkajoucoin.com</span> for
-            any <br /> queries or support
+            any <br className="hidden md:block" /> queries or support
           </p>
         </motion.div>
 
