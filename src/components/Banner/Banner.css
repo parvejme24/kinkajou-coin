@@ -1,0 +1,52 @@
+.banner {
+  position: relative;
+  min-height: calc(100vh - 80px);
+  background-color: #000;
+  overflow: hidden;
+}
+
+.grid-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/grid.svg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.banner .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Countdown Timer Styles */
+.countdown-box {
+  background: rgba(0, 35, 18, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 204, 85, 0.2);
+  transition: all 0.3s ease;
+}
+
+.countdown-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 204, 85, 0.1);
+}
+
+.countdown-number {
+  background: linear-gradient(45deg, #00CC55, #48FF76);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 10px rgba(72, 255, 118, 0.3);
+}
+
+.countdown-label {
+  color: #90B4D4;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+} 

@@ -2,13 +2,14 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import BANNER_IMAGE from "../../assets/banner.png";
 import GRID from "../../assets/grid.png";
+import "./Banner.css";
 
 export default function Banner() {
   const [timeLeft, setTimeLeft] = useState({
-    days: "00",
-    hours: "00",
-    minutes: "00",
-    seconds: "00",
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
   });
 
   useEffect(() => {
@@ -24,12 +25,7 @@ export default function Banner() {
       const minutes = Math.floor((difference / 1000 / 60) % 60);
       const seconds = Math.floor((difference / 1000) % 60);
 
-      setTimeLeft({
-        days: days.toString().padStart(2, "0"),
-        hours: hours.toString().padStart(2, "0"),
-        minutes: minutes.toString().padStart(2, "0"),
-        seconds: seconds.toString().padStart(2, "0"),
-      });
+      setTimeLeft({ days, hours, minutes, seconds });
     }, 1000);
 
     return () => clearInterval(timer);
@@ -62,14 +58,14 @@ export default function Banner() {
       className="relative py-20 px-4 sm:px-6 lg:px-8"
       style={{
         backgroundImage: `url(${GRID})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
       }}
     >
       {/* Add a dark overlay to ensure content visibility */}
       <div className="absolute inset-0 bg-black/60 backdrop-blur-[1px]"></div>
-      
+
       <div className="container mx-auto max-w-7xl relative z-10">
         <div className="relative bg-black/40 backdrop-blur-sm border border-[#113E14] shadow-lg rounded-3xl p-6 sm:p-8 lg:p-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -82,7 +78,7 @@ export default function Banner() {
             >
               <motion.h2
                 variants={itemVariants}
-                className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-[#ADF99F] to-[#00CC55]/80  bg-clip-text text-transparent leading-tight"
+                className="text-2xl sm:text-3xl lg:text-5xl font-bold bg-gradient-to-r from-[#ADF99F] to-[#00CC55]/80  bg-clip-text text-transparent leading-tight"
               >
                 KinkajouCoin: A Greener Future in Your Wallet
               </motion.h2>
@@ -103,23 +99,30 @@ export default function Banner() {
                   Crypto Market Starts in
                 </h5>
                 <div className="flex items-center gap-4">
-                  {Object.entries(timeLeft).map(([key, value]) => (
-                    <motion.div
-                      key={key}
-                      whileHover={{ scale: 1.05 }}
-                      className="text-center"
-                    >
-                      <div className="relative">
-                        <div className="absolute inset-0 bg-gradient-to-b from-[#ADF99F]/20 to-transparent rounded-lg blur-sm" />
-                        <p className="relative border border-[#adf99f7c] rounded-lg text-xl sm:text-2xl md:text-3xl font-bold text-white px-5 py-5">
-                          {value}
+                  {Object.entries(timeLeft).map(
+                    ([key, value], index, array) => (
+                      <motion.div
+                        key={key}
+                        whileHover={{ scale: 1.05 }}
+                        className="text-center"
+                      >
+                        <div className="relative">
+                          <div className="absolute inset-0 bg-gradient-to-b from-[#ADF99F]/20 to-transparent rounded-lg blur-sm" />
+                          <div className="flex items-center gap-2">
+                            <p className="relative border border-[#adf99f7c] rounded-lg text-xl sm:text-2xl md:text-3xl font-bold text-white px-5 py-5">
+                              {value}
+                            </p>
+                            {index < array.length - 1 && (
+                              <span className="text-white text-4xl">:</span>
+                            )}
+                          </div>
+                        </div>
+                        <p className="mt-2 text-sm sm:text-base text-[#C3C3C3] font-medium capitalize">
+                          {key}
                         </p>
-                      </div>
-                      <p className="mt-2 text-sm sm:text-base text-[#C3C3C3] font-medium capitalize">
-                        {key}
-                      </p>
-                    </motion.div>
-                  ))}
+                      </motion.div>
+                    )
+                  )}
                 </div>
               </motion.div>
             </motion.div>
@@ -137,7 +140,7 @@ export default function Banner() {
                 transition={{ duration: 0.3 }}
                 src={BANNER_IMAGE}
                 alt="KinkajouCoin Banner"
-                className="relative w-full h-auto max-w-[500px] mx-auto"
+                className="relative w-full h-auto lg:w-[500px] max-w-[500px] mx-auto"
               />
             </motion.div>
           </div>

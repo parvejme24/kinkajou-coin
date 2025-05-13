@@ -76,13 +76,13 @@ export default function Header() {
   };
 
   return (
-    <header 
+    <header
       className="fixed top-0 left-0 right-0 z-50"
       style={{
         backgroundImage: `linear-gradient(rgba(0, 204, 85, 0.1), rgba(0, 204, 85, 0.1)), url(${GRID})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
       }}
     >
       <div className="absolute inset-0 bg-black/80 backdrop-blur-sm"></div>
@@ -184,7 +184,7 @@ export default function Header() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="mt-4 bg-gradient-to-r from-[#B9FEA4] to-[#48FF76] text-black px-8 py-3 rounded-lg titillium font-semibold text-xl"
+                  className="cursor-pointer mt-4 bg-gradient-to-r from-[#B9FEA4] to-[#48FF76] text-black px-8 py-3 rounded-lg titillium font-semibold text-xl"
                 >
                   Connect Wallet
                 </motion.button>

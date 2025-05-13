@@ -15,9 +15,9 @@ export default function App() {
     <div className="bg-black min-h-screen overflow-x-hidden">
       <Preloader />
       <Header />
-      <main className="pt-[40px]">
+      <main className="pt-[75px]">
         <Banner />
-        <div className="bg-black">
+        <div className="bg-black mt-10">
           <BuyNow />
           <About />
           <Tokenomics />
