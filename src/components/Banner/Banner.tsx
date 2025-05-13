@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import BANNER_IMAGE from "../../assets/banner.png";
-import GRID from "../../assets/grid.png";
 import "./Banner.css";
 
 export default function Banner() {
@@ -55,17 +54,8 @@ export default function Banner() {
   return (
     <section
       id="home"
-      className="relative py-20 px-4 sm:px-6 lg:px-8"
-      style={{
-        backgroundImage: `url(${GRID})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
+      className="banner relative py-20 px-4 sm:px-6 lg:px-8"
     >
-      {/* Add a dark overlay to ensure content visibility */}
-      <div className="absolute inset-0 bg-black/60 backdrop-blur-[1px]"></div>
-
       <div className="container mx-auto max-w-7xl relative z-10">
         <div className="relative bg-black/40 backdrop-blur-sm border border-[#113E14] shadow-lg rounded-3xl p-6 sm:p-8 lg:p-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center">

@@ -76,7 +76,11 @@ export default function About() {
             <div className="absolute inset-0 bg-gradient-to-r from-[#ADF99F]/20 to-transparent rounded-full blur-3xl" />
             <div className="w-full lg:max-w-[70%] mx-auto flex justify-center items-center border border-[#00CC55] rounded p-14">
               <motion.img
-                animate={{ rotate: 360 }}
+                animate={{ 
+                  rotateX: 360,
+                  rotateY: 360,
+                  rotateZ: 360
+                }}
                 transition={{
                   duration: 20,
                   repeat: Infinity,
@@ -86,6 +90,7 @@ export default function About() {
                 alt="about"
                 className="relative w-[200px] h-[200px]"
                 draggable={false}
+                style={{ transformStyle: "preserve-3d" }}
               />
             </div>
           </motion.div>
