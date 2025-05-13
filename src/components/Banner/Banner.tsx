@@ -117,7 +117,7 @@ export default function Banner() {
                             )}
                           </div>
                         </div>
-                        <p className="mt-2 text-sm sm:text-base text-[#C3C3C3] font-medium capitalize">
+                        <p className="mt-2 -ml-2 text-sm sm:text-base text-[#C3C3C3] font-medium capitalize">
                           {key}
                         </p>
                       </motion.div>

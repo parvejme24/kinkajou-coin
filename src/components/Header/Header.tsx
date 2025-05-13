@@ -181,13 +181,14 @@ export default function Header() {
                     {item.name}
                   </motion.li>
                 ))}
-                <motion.button
+                <motion.a
+                  href="#"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="cursor-pointer mt-4 bg-gradient-to-r from-[#B9FEA4] to-[#48FF76] text-black px-8 py-3 rounded-lg titillium font-semibold text-xl"
                 >
                   Connect Wallet
-                </motion.button>
+                </motion.a>
               </ul>
             </motion.div>
           )}
