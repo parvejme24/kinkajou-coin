@@ -44,7 +44,7 @@ export default function BuyNow() {
           </div>
 
           <p className="text-white text-2xl text-center font-bold">
-            Buy in before price increase!Listing soon
+            Buy in before price increase! Listing soon
           </p>
 
           <div className="grid grid-cols-2 gap-5 mt-6">
