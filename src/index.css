@@ -4,6 +4,18 @@
 
 * {
   font-family: "Open Sans", sans-serif;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-padding-top: 72px; /* Account for fixed header */
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
 }
 
 .titillium {
@@ -35,4 +47,17 @@
 * {
   scrollbar-width: thin;
   scrollbar-color: #48ff76 #000;
+}
+
+/* Prevent content shift during page load */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Smooth transitions for all interactive elements */
+a,
+button {
+  transition: all 0.3s ease;
 }

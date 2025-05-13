@@ -9,6 +9,7 @@ export default function Header() {
 
   const menuItems = [
     { name: "Home", id: "home" },
+    { name: "Boy Now", id: "buyNow" },
     { name: "About", id: "about" },
     { name: "Tokenomics", id: "tokenomics" },
     { name: "Roadmap", id: "roadmap" },
@@ -40,7 +41,15 @@ export default function Header() {
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+      const headerOffset = 72; // Height of the fixed header
+      const elementPosition = section.getBoundingClientRect().top;
+      const offsetPosition =
+        elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
       setActiveSection(sectionId);
       setIsMenuOpen(false);
     }
@@ -75,7 +84,7 @@ export default function Header() {
           transition={{ duration: 0.5 }}
         >
           <img src={LOGO_ICON} alt="Logo Icon" className="h-8 w-auto" />
-          <img src={LOGO_TEXT} alt="Logo Text" className="h-8 w-auto ml-2" />
+          <img src={LOGO_TEXT} alt="Logo Text" className="h-8 w-[150px] lg:w-[200px] ml-2" />
         </motion.div>
 
         {/* Desktop Navigation */}

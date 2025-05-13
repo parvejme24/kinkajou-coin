@@ -12,18 +12,20 @@ import Preloader from "./components/Preloader/Preloader";
 
 export default function App() {
   return (
-    <div className="bg-black">
+    <div className="bg-black min-h-screen overflow-x-hidden">
       <Preloader />
       <Header />
-      <Banner />
-      <BuyNow />
-      <About />
-      <Tokenomics />
-      <Roadmap />
-      <HowItWorks />
-      <FAQ />
-      <Contact />
-      <Footer />
+      <main className="pt-[40px]">
+        <Banner />
+        <BuyNow />
+        <About />
+        <Tokenomics />
+        <Roadmap />
+        <HowItWorks />
+        <FAQ />
+        <Contact />
+        <Footer />
+      </main>
     </div>
   );
 }
