@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 import LOGO_ICON from "../../assets/logo-icon.png";
-import './Preloader.css';
+import "./Preloader.css";
 
-const Preloader = () => {
+export default function Preloader() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -15,12 +15,15 @@ const Preloader = () => {
   }, []);
 
   if (!loading) return null;
-
   return (
     <div className="preloader">
       <div className="loader">
         <div className="logo-container">
-          <img src={LOGO_ICON} alt="KinkajouCoin" className="logo mx-auto mt-10" />
+          <img
+            src={LOGO_ICON}
+            alt="KinkajouCoin"
+            className="logo mx-auto mt-10"
+          />
           <div className="loading-bar">
             <div className="loading-progress"></div>
           </div>
@@ -29,6 +32,4 @@ const Preloader = () => {
       </div>
     </div>
   );
-};
-
-export default Preloader; 
+}

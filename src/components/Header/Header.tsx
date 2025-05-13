@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import LOGO_ICON from "../../assets/logo-icon.png";
 import LOGO_TEXT from "../../assets/logo-text.png";
+import GRID from "../../assets/grid.svg";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,7 +10,7 @@ export default function Header() {
 
   const menuItems = [
     { name: "Home", id: "home" },
-    { name: "Boy Now", id: "buyNow" },
+    { name: "Presale", id: "presale" },
     { name: "About", id: "about" },
     { name: "Tokenomics", id: "tokenomics" },
     { name: "Roadmap", id: "roadmap" },
@@ -75,8 +76,17 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm">
-      <div className="container mx-auto max-w-7xl px-5 lg:px-0 py-5 flex items-center justify-between">
+    <header 
+      className="fixed top-0 left-0 right-0 z-50"
+      style={{
+        backgroundImage: `linear-gradient(rgba(0, 204, 85, 0.1), rgba(0, 204, 85, 0.1)), url(${GRID})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
+      <div className="absolute inset-0 bg-black/80 backdrop-blur-sm"></div>
+      <div className="container mx-auto max-w-7xl px-5 lg:px-0 py-5 flex items-center justify-between relative z-10">
         <motion.div
           className="flex items-center"
           initial={{ opacity: 0, y: -20 }}
@@ -84,7 +94,7 @@ export default function Header() {
           transition={{ duration: 0.5 }}
         >
           <img src={LOGO_ICON} alt="Logo Icon" className="h-8 w-auto" />
-          <img src={LOGO_TEXT} alt="Logo Text" className="h-8 w-[150px] lg:w-[200px] ml-2" />
+          <img src={LOGO_TEXT} alt="Logo Text" className="h-8 w-auto ml-2" />
         </motion.div>
 
         {/* Desktop Navigation */}

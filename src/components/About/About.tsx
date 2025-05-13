@@ -79,7 +79,8 @@ export default function About() {
               transition={{ duration: 0.3 }}
               src={ABOUT_IMAGE}
               alt="about"
-              className="relative w-full h-auto"
+              className="relative w-full h-auto "
+              draggable={false}
             />
           </motion.div>
         </motion.div>

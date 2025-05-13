@@ -17,14 +17,16 @@ export default function App() {
       <Header />
       <main className="pt-[40px]">
         <Banner />
-        <BuyNow />
-        <About />
-        <Tokenomics />
-        <Roadmap />
-        <HowItWorks />
-        <FAQ />
-        <Contact />
-        <Footer />
+        <div className="bg-black">
+          <BuyNow />
+          <About />
+          <Tokenomics />
+          <Roadmap />
+          <HowItWorks />
+          <FAQ />
+          <Contact />
+          <Footer />
+        </div>
       </main>
     </div>
   );

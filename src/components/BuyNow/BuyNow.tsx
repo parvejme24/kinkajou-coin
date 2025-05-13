@@ -5,7 +5,7 @@ import COIN from "../../assets/coin.png";
 
 export default function BuyNow() {
   return (
-    <div id="buyNow">
+    <div id="presale">
       <div className="container mx-auto max-w-7xl px-5 lg:px-0 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         {/* left side  */}
         <motion.div
