@@ -57,7 +57,7 @@ export default function BuyNow() {
               <div className="relative w-full">
                 <input
                   className="w-full border border-[#00CC55] rounded bg-gradient-to-r from-[#00cc5525] to-[#00cc5534] px-2 py-5 text-3xl font-bold text-white pr-12"
-                  type="number"
+                  type="text"
                   placeholder="0"
                 />
                 <img
@@ -78,7 +78,7 @@ export default function BuyNow() {
               <div className="relative w-full">
                 <input
                   className="w-full border border-[#00CC55] rounded bg-gradient-to-l from-[#00cc5525] to-[#00cc5534] px-2 py-5 text-3xl font-bold text-white pr-12"
-                  type="number"
+                  type="text"
                   placeholder="0"
                 />
                 <img
