@@ -122,7 +122,7 @@ export default function Header() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="ml-10 bg-gradient-to-r from-[#B9FEA4] to-[#48FF76] text-black px-6 py-2 rounded titillium font-semibold"
+            className="ml-10 bg-gradient-to-r from-[#B9FEA4] to-[#48FF76] text-black px-6 py-2 rounded titillium font-semibold cursor-pointer"
           >
             Connect Wallet
           </motion.button>
