@@ -120,7 +120,7 @@ export default function FAQ() {
                       <h3
                         className={`text-lg sm:text-xl font-semibold transition-colors duration-300 ${
                           openIndex === item.id
-                            ? "text-[#3CFF71]"
+                            ? "bg-gradient-to-r from-[#ADF99F] to-[#00CC55]/80  bg-clip-text text-transparent leading-tight"
                             : "text-[#B6B6B6]"
                         }`}
                       >

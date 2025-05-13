@@ -54,7 +54,7 @@ export default function Contact() {
   };
 
   return (
-    <section className="relative py-10 px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="relative py-10 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

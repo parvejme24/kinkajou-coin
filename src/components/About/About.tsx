@@ -40,7 +40,9 @@ export default function About() {
             whileHover={{ scale: 1.02 }}
           >
             About <br />
-            <span className="text-[#3CFF71]">KinkajouCoin</span>
+            <span className="bg-gradient-to-r from-[#ADF99F] to-[#00CC55]/80  bg-clip-text text-transparent leading-tight">
+              KinkajouCoin
+            </span>
           </motion.h2>
           <motion.p
             variants={itemVariants}
@@ -53,13 +55,14 @@ export default function About() {
             believe in transparency, accountability, and positive action—values
             that are reflected in everything we do.{" "}
           </motion.p>
-          <motion.button
+          <motion.a
+            href="#contact"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="mt-5 bg-gradient-to-r from-[#B9FEA4] to-[#48FF76] text-black px-8 py-3 rounded-lg titillium font-semibold text-xl cursor-pointer"
+            className="mt-6 inline-block bg-gradient-to-r from-[#B9FEA4] to-[#48FF76] text-black px-8 py-3 rounded-lg titillium font-semibold text-xl cursor-pointer"
           >
             Contact Us
-          </motion.button>
+          </motion.a>
         </motion.div>
 
         {/* image  */}

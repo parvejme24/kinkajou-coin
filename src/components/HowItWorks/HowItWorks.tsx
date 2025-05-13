@@ -50,7 +50,10 @@ export default function HowItWorks() {
   };
 
   return (
-    <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black to-[#0A0A0A]">
+    <section
+      id="works"
+      className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black to-[#0A0A0A]"
+    >
       <div className="container mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

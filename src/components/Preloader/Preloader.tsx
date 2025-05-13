@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import LOGO_ICON from "../../assets/logo-icon.png";
 import './Preloader.css';
 
 const Preloader = () => {
@@ -18,8 +19,13 @@ const Preloader = () => {
   return (
     <div className="preloader">
       <div className="loader">
-        <div className="coin"></div>
-        <p>Loading...</p>
+        <div className="logo-container">
+          <img src={LOGO_ICON} alt="KinkajouCoin" className="logo mx-auto mt-10" />
+          <div className="loading-bar">
+            <div className="loading-progress"></div>
+          </div>
+        </div>
+        <p className="loading-text">Loading KinkajouCoin</p>
       </div>
     </div>
   );

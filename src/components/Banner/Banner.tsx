@@ -72,7 +72,7 @@ export default function Banner() {
             >
               <motion.h2
                 variants={itemVariants}
-                className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#ADF99F] leading-tight"
+                className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-[#ADF99F] to-[#00CC55]/80  bg-clip-text text-transparent leading-tight"
               >
                 KinkajouCoin: A Greener Future in Your Wallet
               </motion.h2>

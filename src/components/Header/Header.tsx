@@ -12,12 +12,16 @@ export default function Header() {
     { name: "About", id: "about" },
     { name: "Tokenomics", id: "tokenomics" },
     { name: "Roadmap", id: "roadmap" },
+    { name: "How It Works", id: "works" },
     { name: "Faq", id: "faq" },
+    { name: "Contact", id: "contact" },
   ];
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = menuItems.map(item => document.getElementById(item.id));
+      const sections = menuItems.map((item) =>
+        document.getElementById(item.id)
+      );
       const scrollPosition = window.scrollY + 100; // Offset for header height
 
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -85,7 +89,9 @@ export default function Header() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ scale: 1.1 }}
                 className={`cursor-pointer transition-colors ${
-                  activeSection === item.id ? "text-[#48FF76]" : "hover:text-[#48FF76]"
+                  activeSection === item.id
+                    ? "text-[#48FF76]"
+                    : "hover:text-[#48FF76]"
                 }`}
                 onClick={() => scrollToSection(item.id)}
               >
@@ -147,7 +153,9 @@ export default function Header() {
                     transition={{ duration: 0.3, delay: index * 0.1 }}
                     whileHover={{ scale: 1.1 }}
                     className={`text-2xl cursor-pointer transition-colors ${
-                      activeSection === item.id ? "text-[#48FF76]" : "hover:text-[#48FF76]"
+                      activeSection === item.id
+                        ? "text-[#48FF76]"
+                        : "hover:text-[#48FF76]"
                     }`}
                     onClick={() => scrollToSection(item.id)}
                   >
