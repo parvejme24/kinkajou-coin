@@ -48,11 +48,7 @@ export default function BuyNow() {
           </p>
 
           <div className="grid grid-cols-2 gap-5 mt-6">
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 300 }}
-              className="space-y-2"
-            >
+            <div className="space-y-2">
               <p className="text-white text-lg">You pay</p>
               <div className="relative w-full">
                 <input
@@ -67,13 +63,9 @@ export default function BuyNow() {
                   className="absolute right-3 top-1/2 -translate-y-1/2 w-8 h-8 object-contain"
                 />
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 300 }}
-              className="space-y-2"
-            >
+            <div className="space-y-2">
               <p className="text-white text-lg">You Receive</p>
               <div className="relative w-full">
                 <input
@@ -88,7 +80,7 @@ export default function BuyNow() {
                   className="absolute right-3 top-1/2 -translate-y-1/2 w-8 h-8 object-contain"
                 />
               </div>
-            </motion.div>
+            </div>
           </div>
 
           <motion.button
