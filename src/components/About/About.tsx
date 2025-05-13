@@ -74,7 +74,7 @@ export default function About() {
             className="relative"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-[#ADF99F]/20 to-transparent rounded-full blur-3xl" />
-            <div className="w-full lg:max-w-[70%] mx-auto flex justify-center items-center border border-[#00CC55] rounded p-14">
+            <div className="w-full lg:max-w-[70%] mx-auto flex justify-center items-center p-14">
               <motion.img
                 animate={{ 
                   rotateX: 360,
